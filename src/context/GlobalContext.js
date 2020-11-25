@@ -11,14 +11,14 @@ export const GlobalStorage =({children}) => {
     },[])
 
     const criarLembrete = (props) =>{
-        const allLembretes = [...lembretes, {...props, id:lembretes.length}];
+        const allLembretes = [ ...lembretes, { ...props, id: (lembretes.length + 1) } ];
         window.localStorage.setItem("lembretes", JSON.stringify(allLembretes))
         setLembretes(allLembretes);
     }
 
     const editarLembrete = (props, id) => {
         const allLembretes = lembretes.map((lembrete) => {
-            return lembrete.id === id ? props : lembrete
+            return lembrete.id === id ? { ...props, id } : lembrete
         })
         window.localStorage.setItem("lembretes", JSON.stringify(allLembretes))
         setLembretes(allLembretes);

@@ -152,14 +152,9 @@ const Home = () => {
     const data = React.useMemo(()=>{
         return days.map((day) => {
             const matchLembretes = lembretes.filter(lembrete => day.id === lembrete.idDay)
-            return matchLembretes ? {...day, lembretes:matchLembretes} : day
-
-        })
-    },[lembretes]) 
-
-    // React.useEffect(()=>{
-    //     console.log("estou na home",lembretes);
-    // },[lembretes])
+            return matchLembretes ? {...day, lembretes:matchLembretes} : day;
+        });
+    },[lembretes]);
 
     return (
         <div id="calendar">
@@ -188,7 +183,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="calendar">
-                    {data.map((e)=><Card number={e.number} lembretes={e.lembretes} id={e.id}/>)}
+                    {data.map((e)=><Card key={e.id} number={e.number} lembretes={e.lembretes} id={e.id}/>)}
                 </div>
             </div>
         </div>
