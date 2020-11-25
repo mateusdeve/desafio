@@ -1,4 +1,4 @@
-# Para rodar um sua maquina:
+# Para rodar em sua maquina:
 Clone o projeto em sua máquina utilizando o seguinte comando: git clone https://github.com/mateusdeve/desafio.git
 
 ## Instalar as dependências
