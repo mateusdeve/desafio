@@ -1,16 +1,13 @@
 import React from 'react'
+import { GlobalStorage } from './context/GlobalContext'
 import './App.css'
+import Home from './pages/Home'
 
 const App = () => {
-
-  function handleClick(){
-    console.log("oi");
-  }
-  
   return (
-    <div>
-      <button onClick={handleClick}>oi</button>
-    </div>
+    <GlobalStorage>
+      <Home/>
+    </GlobalStorage>
   )
 }
 

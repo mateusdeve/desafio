@@ -1,0 +1,34 @@
+#card{
+    height: 100px;
+    width: 14%;
+    background: #fff;
+    border: 1px solid #6200ee;
+    margin-bottom: 2px;
+    position: relative;
+}
+
+#card p {
+    margin-left: 10px;
+}
+
+.dialogContent {
+    width: 550px !important;
+}
+
+.lembreteP {
+    margin: 0;
+    font-size: 12px;
+}
+
+.clickAdd {
+    background-color: #6200ee;
+    height: 100%;
+}
+
+.btnnovo {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    border: none;
+    cursor: pointer;
+}
